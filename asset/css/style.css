@@ -1,0 +1,233 @@
+:root {
+  --primary-color: #b74f6f;
+  --secondary-color: #adbdff;
+  --background-color: #3185fc;
+  --text-color: #ffffff;
+  --font-size: 16px;
+  --font-weight: 600;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--font-weight);
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  font-size: var(--font-size);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background-color: #e5e8b6;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+h2 {
+  color: #35281d;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #35281db4;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  /* border: 1px solid var(--secondary-color); */
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card div {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2.5px solid var(--primary-color);
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card div i {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.card-subtitle {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: grey;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 90px;
+  font-size: 22px;
+  font-weight: var(--font-weight);
+  text-decoration: none;
+  background-color: #0057b3ca;
+  color: #fff;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.accordion {
+  margin-top: 30px;
+}
+
+.accordion-item {
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: var(--primary-color);
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--secondary-color);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+
+.accordion-content {
+  padding: 15px;
+  display: none;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+}
+
+.accordion-arrow {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%) rotate(0deg);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 6px 0;
+  border-color: var(--secondary-color) transparent transparent transparent;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+header .darkTheme-btn {
+  height: 45px;
+  width: 45px;
+  background-color: rgb(16, 159, 249);
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+header button i {
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+.darkTheme-btn:hover {
+  background-color: var(--background-color);
+}
+
+.darkTheme-btn:active {
+  scale: 0.95;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+#drawSignature {
+  margin-top: 30px;
+  position: relative;
+}
+
+#signatureCanvas {
+  border: 2px solid #ccc;
+}
+
+.signature-controls {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.color-picker,
+.width-slider {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.clear-btn,
+.download-btn {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover,
+.download-btn:hover {
+  background-color: #ddd;
+}
